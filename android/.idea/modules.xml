@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DetectObject.iml" filepath="$PROJECT_DIR$/DetectObject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-camera-master.iml" filepath="$PROJECT_DIR$/android-camera-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cameraFocus.iml" filepath="$PROJECT_DIR$/cameraFocus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
     </modules>
   </component>
 </project>
