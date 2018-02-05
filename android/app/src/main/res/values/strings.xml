@@ -1,24 +1,29 @@
 <resources>
     <string name="app_name">DogMeasure</string>
-    <string name="hello">Hello World, CameraFocusActivity!</string>
-    <string name="input_hint_units">Output unit</string>
-    <string name="action_settings">Settings</string>
-    <string name="action_cleanStorage">Delete stored photos</string>
-    <string name="input_hint">Reference length and unit</string>
-    <string name="setReferencePoints">Select reference points</string>
-    <string name="setMeasurePoints">Select measurement points</string>
-    <string name="setScaleValue">Enter the reference length and press OK</string>
-    <string name="setPicture">Take a photo</string>
-    <string name="btn_clear">Clear</string>
-    <string name="error_noPoints">Please tap on the screen to select the points</string>
-    <string name="error_noScale">Please enter the scale value</string>
-    <string name="error_numberFormat">Please enter a decimal number</string>
-    <string name="result_lbl">Length: </string>
-    <string name="btn_takePicture">Take Picture</string>
-    <string name="action_choosePhoto">Choose existing photo</string>
-    <string name="storageDeleted">Photos deleted</string>
-    <string name="btn_selectScale">Select scale</string>
-    <string name="title_activity_settings">SettingsActivity</string>
-    <string name="btn_OK">OK</string>
-    <string name="btn_cancel">Cancel</string>
+    <string name="alert_message">To prepare your device, please install the ARCore Service.</string>
+    <string name="alert_support">Support Devices:
+\n•  Google Pixel and Pixel XL
+\n•  Samsung Galaxy S8 (SM-G950U, SM-G950N, SM-G950F, SM-G950FD, SM-G950W, SM-G950U1)
+\nhttps://developers.google.com/ar/discover/</string>
+    <string name="alert_download">Download ARCore Service Preview2.</string>
+    <string name="alert_download_link">https://github.com/google-ar/arcore-android-sdk/releases/download/sdk-preview2/arcore-preview2.apk</string>
+    <string name="alert_info">More info about ARCore setup.</string>
+    <string name="alert_info_link">https://developers.google.com/ar/develop/java/getting-started</string>
+    <string name="alert_do_not_show">I have downloaded and installed ARCore Preview2, do not show this alert again.</string>
+    <string name="ok">OK</string>
+
+    <string name="need_permission">Camera permission is needed to run this application</string>
+
+    <string name="not_support">This device does not support AR. </string>
+
+    <string name="action_1">Delete</string>
+    <string name="action_2">Set as first</string>
+    <string name="action_3">Horizontal move</string>
+    <string name="action_4">Vertical move</string>
+
+    <string name="action_1_toast">Remove this cube.</string>
+    <string name="action_2_toast">Reorder and set this cube to the first.</string>
+    <string name="action_3_toast">Move on x and z axis.</string>
+    <string name="action_4_toast">Move on y axis.</string>
+
 </resources>

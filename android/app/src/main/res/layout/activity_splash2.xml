@@ -4,9 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="xyz.pinaki.androidcamera.example.Splash2">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/preview_splash2"/>
+    tools:context="com.hl3hl3.arcoremeasure.Splash2Activity">
+
 </android.support.constraint.ConstraintLayout>
