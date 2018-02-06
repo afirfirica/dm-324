@@ -1,0 +1,718 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07FF1207DA9367F4AF540059 /* Pods_ChellyDogs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B24681248E72FD909E6B63B /* Pods_ChellyDogs.framework */; };
+		EC20ED022029AB9600990CCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC20ED012029AB9600990CCA /* AppDelegate.swift */; };
+		EC20ED042029AB9600990CCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC20ED032029AB9600990CCA /* ViewController.swift */; };
+		EC20ED072029AB9600990CCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC20ED052029AB9600990CCA /* Main.storyboard */; };
+		EC20ED092029AB9600990CCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC20ED082029AB9600990CCA /* Assets.xcassets */; };
+		EC20ED0C2029AB9600990CCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC20ED0A2029AB9600990CCA /* LaunchScreen.storyboard */; };
+		EC20ED172029AB9600990CCA /* ChellyDogsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC20ED162029AB9600990CCA /* ChellyDogsTests.swift */; };
+		EC20ED222029AB9600990CCA /* ChellyDogsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC20ED212029AB9600990CCA /* ChellyDogsUITests.swift */; };
+		EC20ED3C2029B4E800990CCA /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC20ED3B2029B4E800990CCA /* SplashViewController.swift */; };
+		EC20ED3F2029B6F700990CCA /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC20ED3E2029B6F700990CCA /* R.generated.swift */; };
+		EC20ED662029BCF900990CCA /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC20ED3D2029B67100990CCA /* ARKit.framework */; };
+		ECDF2C342029D30000788734 /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF2C302029D30000788734 /* FocusSquare.swift */; };
+		ECDF2C352029D30000788734 /* LineNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF2C312029D30000788734 /* LineNode.swift */; };
+		ECDF2C362029D30000788734 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF2C322029D30000788734 /* Plane.swift */; };
+		ECDF2C372029D30000788734 /* PlaneDebugVisualization.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF2C332029D30000788734 /* PlaneDebugVisualization.swift */; };
+		ECDF2C3D2029D31F00788734 /* PlaneDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECDF2C3A2029D31F00788734 /* PlaneDetector.mm */; };
+		ECDF2C3E2029D31F00788734 /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF2C3B2029D31F00788734 /* UIColorExt.swift */; };
+		ECDF2C3F2029D31F00788734 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF2C3C2029D31F00788734 /* Utilities.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC20ED132029AB9600990CCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC20ECF62029AB9600990CCA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC20ECFD2029AB9600990CCA;
+			remoteInfo = ChellyDogs;
+		};
+		EC20ED1E2029AB9600990CCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC20ECF62029AB9600990CCA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC20ECFD2029AB9600990CCA;
+			remoteInfo = ChellyDogs;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B24681248E72FD909E6B63B /* Pods_ChellyDogs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChellyDogs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		639A205B863316862845CCFD /* Pods-ChellyDogs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChellyDogs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChellyDogs/Pods-ChellyDogs.debug.xcconfig"; sourceTree = "<group>"; };
+		9B925D1B2B9BDBF028E74DA3 /* Pods-ChellyDogs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChellyDogs.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChellyDogs/Pods-ChellyDogs.release.xcconfig"; sourceTree = "<group>"; };
+		EC20ECFE2029AB9600990CCA /* ChellyDogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChellyDogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC20ED012029AB9600990CCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC20ED032029AB9600990CCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC20ED062029AB9600990CCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC20ED082029AB9600990CCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC20ED0B2029AB9600990CCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC20ED0D2029AB9600990CCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC20ED122029AB9600990CCA /* ChellyDogsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChellyDogsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC20ED162029AB9600990CCA /* ChellyDogsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChellyDogsTests.swift; sourceTree = "<group>"; };
+		EC20ED182029AB9600990CCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC20ED1D2029AB9600990CCA /* ChellyDogsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChellyDogsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC20ED212029AB9600990CCA /* ChellyDogsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChellyDogsUITests.swift; sourceTree = "<group>"; };
+		EC20ED232029AB9600990CCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC20ED3B2029B4E800990CCA /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		EC20ED3D2029B67100990CCA /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
+		EC20ED3E2029B6F700990CCA /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		EC20ED652029BC3100990CCA /* ChellyDogs-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChellyDogs-Bridging-Header.h"; sourceTree = "<group>"; };
+		ECDF2C302029D30000788734 /* FocusSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
+		ECDF2C312029D30000788734 /* LineNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineNode.swift; sourceTree = "<group>"; };
+		ECDF2C322029D30000788734 /* Plane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
+		ECDF2C332029D30000788734 /* PlaneDebugVisualization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaneDebugVisualization.swift; sourceTree = "<group>"; };
+		ECDF2C392029D31F00788734 /* PlaneDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaneDetector.h; sourceTree = "<group>"; };
+		ECDF2C3A2029D31F00788734 /* PlaneDetector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlaneDetector.mm; sourceTree = "<group>"; };
+		ECDF2C3B2029D31F00788734 /* UIColorExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
+		ECDF2C3C2029D31F00788734 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC20ECFB2029AB9600990CCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC20ED662029BCF900990CCA /* ARKit.framework in Frameworks */,
+				07FF1207DA9367F4AF540059 /* Pods_ChellyDogs.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC20ED0F2029AB9600990CCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC20ED1A2029AB9600990CCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D7C266AE8715ECFFFF3D509 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC20ED3D2029B67100990CCA /* ARKit.framework */,
+				0B24681248E72FD909E6B63B /* Pods_ChellyDogs.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6EDB183F34F623FD7C8BA9C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				639A205B863316862845CCFD /* Pods-ChellyDogs.debug.xcconfig */,
+				9B925D1B2B9BDBF028E74DA3 /* Pods-ChellyDogs.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EC20ECF52029AB9600990CCA = {
+			isa = PBXGroup;
+			children = (
+				EC20ED002029AB9600990CCA /* ChellyDogs */,
+				EC20ED152029AB9600990CCA /* ChellyDogsTests */,
+				EC20ED202029AB9600990CCA /* ChellyDogsUITests */,
+				EC20ECFF2029AB9600990CCA /* Products */,
+				6EDB183F34F623FD7C8BA9C0 /* Pods */,
+				3D7C266AE8715ECFFFF3D509 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EC20ECFF2029AB9600990CCA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC20ECFE2029AB9600990CCA /* ChellyDogs.app */,
+				EC20ED122029AB9600990CCA /* ChellyDogsTests.xctest */,
+				EC20ED1D2029AB9600990CCA /* ChellyDogsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC20ED002029AB9600990CCA /* ChellyDogs */ = {
+			isa = PBXGroup;
+			children = (
+				ECDF2C382029D31F00788734 /* Utils */,
+				ECDF2C2F2029D30000788734 /* Node */,
+				EC20ED3E2029B6F700990CCA /* R.generated.swift */,
+				EC20ED012029AB9600990CCA /* AppDelegate.swift */,
+				EC20ED3B2029B4E800990CCA /* SplashViewController.swift */,
+				EC20ED032029AB9600990CCA /* ViewController.swift */,
+				EC20ED052029AB9600990CCA /* Main.storyboard */,
+				EC20ED082029AB9600990CCA /* Assets.xcassets */,
+				EC20ED0A2029AB9600990CCA /* LaunchScreen.storyboard */,
+				EC20ED0D2029AB9600990CCA /* Info.plist */,
+				EC20ED652029BC3100990CCA /* ChellyDogs-Bridging-Header.h */,
+			);
+			path = ChellyDogs;
+			sourceTree = "<group>";
+		};
+		EC20ED152029AB9600990CCA /* ChellyDogsTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC20ED162029AB9600990CCA /* ChellyDogsTests.swift */,
+				EC20ED182029AB9600990CCA /* Info.plist */,
+			);
+			path = ChellyDogsTests;
+			sourceTree = "<group>";
+		};
+		EC20ED202029AB9600990CCA /* ChellyDogsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EC20ED212029AB9600990CCA /* ChellyDogsUITests.swift */,
+				EC20ED232029AB9600990CCA /* Info.plist */,
+			);
+			path = ChellyDogsUITests;
+			sourceTree = "<group>";
+		};
+		ECDF2C2F2029D30000788734 /* Node */ = {
+			isa = PBXGroup;
+			children = (
+				ECDF2C302029D30000788734 /* FocusSquare.swift */,
+				ECDF2C312029D30000788734 /* LineNode.swift */,
+				ECDF2C322029D30000788734 /* Plane.swift */,
+				ECDF2C332029D30000788734 /* PlaneDebugVisualization.swift */,
+			);
+			path = Node;
+			sourceTree = "<group>";
+		};
+		ECDF2C382029D31F00788734 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ECDF2C392029D31F00788734 /* PlaneDetector.h */,
+				ECDF2C3A2029D31F00788734 /* PlaneDetector.mm */,
+				ECDF2C3B2029D31F00788734 /* UIColorExt.swift */,
+				ECDF2C3C2029D31F00788734 /* Utilities.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC20ECFD2029AB9600990CCA /* ChellyDogs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC20ED262029AB9600990CCA /* Build configuration list for PBXNativeTarget "ChellyDogs" */;
+			buildPhases = (
+				FC81572BE6E09AFA11E7A048 /* [CP] Check Pods Manifest.lock */,
+				EC20ECFA2029AB9600990CCA /* Sources */,
+				EC20ECFB2029AB9600990CCA /* Frameworks */,
+				EC20ECFC2029AB9600990CCA /* Resources */,
+				325564AC9501DF24E8523F6D /* [CP] Embed Pods Frameworks */,
+				53EB3B2391B988BFEAE0366E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChellyDogs;
+			productName = ChellyDogs;
+			productReference = EC20ECFE2029AB9600990CCA /* ChellyDogs.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC20ED112029AB9600990CCA /* ChellyDogsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC20ED292029AB9600990CCA /* Build configuration list for PBXNativeTarget "ChellyDogsTests" */;
+			buildPhases = (
+				EC20ED0E2029AB9600990CCA /* Sources */,
+				EC20ED0F2029AB9600990CCA /* Frameworks */,
+				EC20ED102029AB9600990CCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC20ED142029AB9600990CCA /* PBXTargetDependency */,
+			);
+			name = ChellyDogsTests;
+			productName = ChellyDogsTests;
+			productReference = EC20ED122029AB9600990CCA /* ChellyDogsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EC20ED1C2029AB9600990CCA /* ChellyDogsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC20ED2C2029AB9600990CCA /* Build configuration list for PBXNativeTarget "ChellyDogsUITests" */;
+			buildPhases = (
+				EC20ED192029AB9600990CCA /* Sources */,
+				EC20ED1A2029AB9600990CCA /* Frameworks */,
+				EC20ED1B2029AB9600990CCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC20ED1F2029AB9600990CCA /* PBXTargetDependency */,
+			);
+			name = ChellyDogsUITests;
+			productName = ChellyDogsUITests;
+			productReference = EC20ED1D2029AB9600990CCA /* ChellyDogsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC20ECF62029AB9600990CCA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = 123;
+				TargetAttributes = {
+					EC20ECFD2029AB9600990CCA = {
+						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+					};
+					EC20ED112029AB9600990CCA = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EC20ECFD2029AB9600990CCA;
+					};
+					EC20ED1C2029AB9600990CCA = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EC20ECFD2029AB9600990CCA;
+					};
+				};
+			};
+			buildConfigurationList = EC20ECF92029AB9600990CCA /* Build configuration list for PBXProject "ChellyDogs" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC20ECF52029AB9600990CCA;
+			productRefGroup = EC20ECFF2029AB9600990CCA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC20ECFD2029AB9600990CCA /* ChellyDogs */,
+				EC20ED112029AB9600990CCA /* ChellyDogsTests */,
+				EC20ED1C2029AB9600990CCA /* ChellyDogsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC20ECFC2029AB9600990CCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC20ED0C2029AB9600990CCA /* LaunchScreen.storyboard in Resources */,
+				EC20ED092029AB9600990CCA /* Assets.xcassets in Resources */,
+				EC20ED072029AB9600990CCA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC20ED102029AB9600990CCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC20ED1B2029AB9600990CCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		325564AC9501DF24E8523F6D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChellyDogs/Pods-ChellyDogs-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AVOSCloud/AVOSCloud.framework",
+				"${BUILT_PRODUCTS_DIR}/AwesomeIntroGuideView/AwesomeIntroGuideView.framework",
+				"${BUILT_PRODUCTS_DIR}/LeanCloudFeedback/LeanCloudFeedback.framework",
+				"${BUILT_PRODUCTS_DIR}/MGJRouter/MGJRouter.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AVOSCloud.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AwesomeIntroGuideView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LeanCloudFeedback.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MGJRouter.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChellyDogs/Pods-ChellyDogs-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53EB3B2391B988BFEAE0366E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChellyDogs/Pods-ChellyDogs-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC81572BE6E09AFA11E7A048 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChellyDogs-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC20ECFA2029AB9600990CCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECDF2C342029D30000788734 /* FocusSquare.swift in Sources */,
+				ECDF2C3F2029D31F00788734 /* Utilities.swift in Sources */,
+				ECDF2C3D2029D31F00788734 /* PlaneDetector.mm in Sources */,
+				EC20ED3C2029B4E800990CCA /* SplashViewController.swift in Sources */,
+				EC20ED042029AB9600990CCA /* ViewController.swift in Sources */,
+				ECDF2C3E2029D31F00788734 /* UIColorExt.swift in Sources */,
+				ECDF2C362029D30000788734 /* Plane.swift in Sources */,
+				ECDF2C352029D30000788734 /* LineNode.swift in Sources */,
+				EC20ED022029AB9600990CCA /* AppDelegate.swift in Sources */,
+				EC20ED3F2029B6F700990CCA /* R.generated.swift in Sources */,
+				ECDF2C372029D30000788734 /* PlaneDebugVisualization.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC20ED0E2029AB9600990CCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC20ED172029AB9600990CCA /* ChellyDogsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC20ED192029AB9600990CCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC20ED222029AB9600990CCA /* ChellyDogsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC20ED142029AB9600990CCA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC20ECFD2029AB9600990CCA /* ChellyDogs */;
+			targetProxy = EC20ED132029AB9600990CCA /* PBXContainerItemProxy */;
+		};
+		EC20ED1F2029AB9600990CCA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC20ECFD2029AB9600990CCA /* ChellyDogs */;
+			targetProxy = EC20ED1E2029AB9600990CCA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EC20ED052029AB9600990CCA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC20ED062029AB9600990CCA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EC20ED0A2029AB9600990CCA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC20ED0B2029AB9600990CCA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC20ED242029AB9600990CCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC20ED252029AB9600990CCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC20ED272029AB9600990CCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 639A205B863316862845CCFD /* Pods-ChellyDogs.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ChellyDogs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = company.ChellyDogs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ChellyDogs/ChellyDogs-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC20ED282029AB9600990CCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B925D1B2B9BDBF028E74DA3 /* Pods-ChellyDogs.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ChellyDogs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = company.ChellyDogs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ChellyDogs/ChellyDogs-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EC20ED2A2029AB9600990CCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ChellyDogsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = company.ChellyDogsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChellyDogs.app/ChellyDogs";
+			};
+			name = Debug;
+		};
+		EC20ED2B2029AB9600990CCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ChellyDogsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = company.ChellyDogsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChellyDogs.app/ChellyDogs";
+			};
+			name = Release;
+		};
+		EC20ED2D2029AB9600990CCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ChellyDogsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = company.ChellyDogsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChellyDogs;
+			};
+			name = Debug;
+		};
+		EC20ED2E2029AB9600990CCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ChellyDogsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = company.ChellyDogsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChellyDogs;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC20ECF92029AB9600990CCA /* Build configuration list for PBXProject "ChellyDogs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC20ED242029AB9600990CCA /* Debug */,
+				EC20ED252029AB9600990CCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC20ED262029AB9600990CCA /* Build configuration list for PBXNativeTarget "ChellyDogs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC20ED272029AB9600990CCA /* Debug */,
+				EC20ED282029AB9600990CCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC20ED292029AB9600990CCA /* Build configuration list for PBXNativeTarget "ChellyDogsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC20ED2A2029AB9600990CCA /* Debug */,
+				EC20ED2B2029AB9600990CCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC20ED2C2029AB9600990CCA /* Build configuration list for PBXNativeTarget "ChellyDogsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC20ED2D2029AB9600990CCA /* Debug */,
+				EC20ED2E2029AB9600990CCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC20ECF62029AB9600990CCA /* Project object */;
+}
