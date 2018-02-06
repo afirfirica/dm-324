@@ -1,5 +1,5 @@
-<resources>
-    <string name="app_name">DogMeasure</string>
+﻿<resources>
+    <string name="app_name">ChillyDog</string>
     <string name="alert_message">To prepare your device, please install the ARCore Service.</string>
     <string name="alert_support">Support Devices:
 \n•  Google Pixel and Pixel XL

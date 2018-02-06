@@ -163,6 +163,7 @@ public class ArMeasureActivity extends AppCompatActivity {
     Button btnInch;
     Button btnPlus;
     int isCm = 1;
+    boolean isBtnPlus = false;
     FloatingActionButton fab;
     //hjs
     Context contex = this;
@@ -233,11 +234,20 @@ public class ArMeasureActivity extends AppCompatActivity {
                 }
             });
         }
+
         btnPlus.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
                 // Obtain MotionEvent object
+                if ( isBtnPlus == false ) {
+                    btnPlus.setBackgroundResource(R.drawable.focus_checked);
+                    isBtnPlus = true;
+                } else {
+                    btnPlus.setBackgroundResource(R.drawable.focus_plus);
+                    isBtnPlus = false;
+                }
+
                 long downTime = SystemClock.uptimeMillis();
                 long eventTime = SystemClock.uptimeMillis() + 100;
                 float x = 0.0f;
@@ -823,12 +833,14 @@ public class ArMeasureActivity extends AppCompatActivity {
 
                         point0 = point1;
                     }
-                    String unit = "cm";
+                    String unit = "Cm";
+                    double res = ((int)(total * 10f))/10f;
                     if (isCm == 0) {
                         unit = "Inch";
+                        res = res * 0.393f;
                     }
                     // show result
-                    String result = (((int)(total * 10f))/10f) + unit;//hjs sb.toString().replaceFirst("[+]", "") + " = " + (((int)(total * 10f))/10f) + "cm";
+                    String result = res + unit;//hjs sb.toString().replaceFirst("[+]", "") + " = " + (((int)(total * 10f))/10f) + "cm";
                     if (mAnchors.size() >= 2) {
                         showResult(result);
                     }
@@ -1088,5 +1100,11 @@ public class ArMeasureActivity extends AppCompatActivity {
             });
         }
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        // super.onBackPressed();
+        finishAffinity();
     }
 }

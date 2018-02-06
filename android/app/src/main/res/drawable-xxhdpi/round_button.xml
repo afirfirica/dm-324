@@ -4,7 +4,6 @@
     android:layout_height="match_parent">
     <item>
         <shape android:shape="oval">
-
             <solid android:color="#87CEEB"/>
             <size android:width="150dp" android:height="150dp"/>
         </shape>
