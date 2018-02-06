@@ -14,6 +14,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.GestureDetector;
@@ -24,6 +25,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -76,7 +78,7 @@ public class ArMeasureActivity extends AppCompatActivity {
     private static final String ASSET_NAME_CUBE_SELECTED = "cube_cyan.png";
 
     private static final String NEED_ALERT = "needAlert_preview2";
-    private static final int MAX_CUBE_COUNT = 2;//hjs
+    private static final int MAX_CUBE_COUNT = 16;//hjs
 
     // Rendering. The Renderers are created here, and initialized when the GL surface is created.
     private GLSurfaceView mSurfaceView = null;
@@ -156,9 +158,13 @@ public class ArMeasureActivity extends AppCompatActivity {
 
     // OverlayView overlayViewForTest;
     TextView tv_result;
+    Button btnCm;
+    Button btnInch;
+    Button btnPlus;
+    int isCm = 1;
     FloatingActionButton fab;
     //hjs
-    Context context = this;
+    Context contex = this;
     private GLSurfaceRenderer glSerfaceRenderer = null;
     private View.OnTouchListener onTouchListener = new View.OnTouchListener() {
         @Override
@@ -204,7 +210,11 @@ public class ArMeasureActivity extends AppCompatActivity {
 //        overlayViewForTest = (OverlayView)findViewById(R.id.overlay_for_test);
         //hjs  tv_result = findViewById(R.id.tv_result);
         fab = findViewById(R.id.fab);
-
+        btnCm =(Button) findViewById(R.id.btnCm);
+        btnInch =(Button) findViewById(R.id.btnInch);
+        btnPlus =(Button) findViewById(R.id.btnPlus);
+        btnCm.setBackgroundColor(ContextCompat.getColor(this, R.color.checked));
+        btnInch.setBackgroundColor(ContextCompat.getColor(this, R.color.unChecked));
         for(int i=0; i<cubeIconIdArray.length; i++){
             ivCubeIconList[i] = findViewById(cubeIconIdArray[i]);
             ivCubeIconList[i].setTag(i);
@@ -222,7 +232,33 @@ public class ArMeasureActivity extends AppCompatActivity {
                 }
             });
         }
+        btnPlus.setOnTouchListener(new View.OnTouchListener() {
 
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                // TODO Auto-generated method stub
+                mQueuedSingleTaps.offer(event);
+                return false;
+            }
+        });
+        btnInch.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                isCm = 0;
+
+                btnInch.setBackgroundColor(ContextCompat.getColor(contex, R.color.checked));
+                btnCm.setBackgroundColor(ContextCompat.getColor(contex, R.color.unChecked));
+            }
+        });
+        btnCm.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                isCm = 1;
+                btnCm.setBackgroundColor(ContextCompat.getColor(contex, R.color.checked));
+                btnInch.setBackgroundColor(ContextCompat.getColor(contex, R.color.unChecked));
+            }
+        });
         fab.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -636,7 +672,14 @@ public class ArMeasureActivity extends AppCompatActivity {
             }
             setNowTouchingPointIndex(DEFAULT_VALUE);
         }
-
+        public void deleteAll() {
+            mAnchors.clear();
+            mShowingTapPointX.clear();
+            mShowingTapPointY.clear();
+            mQueuedSingleTaps.clear();
+            mQueuedLongPress.clear();
+            setNowTouchingPointIndex(DEFAULT_VALUE);
+        }
         public void setNowSelectionAsFirst(){
             logStatus("setNowSelectionAsFirst()");
             int index = nowTouchingPointIndex;
@@ -761,9 +804,12 @@ public class ArMeasureActivity extends AppCompatActivity {
 
                         point0 = point1;
                     }
-
+                    String unit = "cm";
+                    if (isCm == 0) {
+                        unit = "Inch";
+                    }
                     // show result
-                    String result = (((int)(total * 10f))/10f) + "cm";//hjs sb.toString().replaceFirst("[+]", "") + " = " + (((int)(total * 10f))/10f) + "cm";
+                    String result = (((int)(total * 10f))/10f) + unit;//hjs sb.toString().replaceFirst("[+]", "") + " = " + (((int)(total * 10f))/10f) + "cm";
                     if (mAnchors.size() >= 2) {
                         showResult(result);
                     }
@@ -973,16 +1019,14 @@ public class ArMeasureActivity extends AppCompatActivity {
                 @Override
                 public void run() {
                     //hjs tv_result.setText(result);
-                    AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                    builder.setMessage("Object Length is /n" + result)
+                    AlertDialog.Builder builder = new AlertDialog.Builder(contex);
+                    builder.setMessage("Object Length is \n" + result)
                             .setCancelable(false)
                             .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
-                                    //do things
+
                                     //hjs
-                                    glSerfaceRenderer.deleteNowSelection();
-                                    // popupWindow.dismiss();
-                                    fab.hide();
+                                    deleteAll();
                                 }
                             });
                     AlertDialog alert = builder.create();

@@ -132,5 +132,44 @@
         </LinearLayout>
 
     </ScrollView>
-
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/btnCm"
+        android:text="Inch"
+        android:textAllCaps="false"
+        android:id="@+id/btnInch"/>
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/imgUnit"
+        android:text="Cm"
+        android:textAllCaps="false"
+        android:id="@+id/btnCm"/>
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="30dp"
+        android:src="@drawable/unit"
+        android:scaleType="fitXY"
+        android:id="@+id/imgUnit"/>
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/round_button"
+        android:text="+"
+        android:textSize="30sp"
+        android:id="@+id/btnPlus"/>
 </RelativeLayout>

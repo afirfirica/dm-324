@@ -8,4 +8,6 @@
     <color name="blue">#599eff</color>
     <color name="line">#aaaaaa</color>
     <color name="white">#efefef</color>
+    <color name="unChecked">#ccc4b9</color>
+    <color name="checked">#fe2a15</color>
 </resources>
