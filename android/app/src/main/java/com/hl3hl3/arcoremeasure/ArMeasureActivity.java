@@ -12,6 +12,7 @@ import android.opengl.GLSurfaceView;
 import android.opengl.Matrix;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
@@ -176,7 +177,7 @@ public class ArMeasureActivity extends AppCompatActivity {
         @Override
         public boolean onSingleTapUp(MotionEvent e) {
             // Queue tap if there is space. Tap is lost if queue is full.
-            mQueuedSingleTaps.offer(e);
+            // mQueuedSingleTaps.offer(e);
 //            log(TAG, "onSingleTapUp, e=" + e.getRawX() + ", " + e.getRawY());
             return true;
         }
@@ -232,13 +233,31 @@ public class ArMeasureActivity extends AppCompatActivity {
                 }
             });
         }
-        btnPlus.setOnTouchListener(new View.OnTouchListener() {
+        btnPlus.setOnClickListener(new View.OnClickListener(){
 
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                // TODO Auto-generated method stub
-                mQueuedSingleTaps.offer(event);
-                return false;
+            public void onClick(View v) {
+                // Obtain MotionEvent object
+                long downTime = SystemClock.uptimeMillis();
+                long eventTime = SystemClock.uptimeMillis() + 100;
+                float x = 0.0f;
+                float y = 0.0f;
+                // List of meta states found here:     developer.android.com/reference/android/view/KeyEvent.html#getMetaState()
+                int metaState = 0;
+                int mWidth= contex.getResources().getDisplayMetrics().widthPixels;
+                int mHeight= contex.getResources().getDisplayMetrics().heightPixels;
+                x = mWidth / 2.0f;
+                y = mHeight / 2.0f;
+                MotionEvent motionEvent = MotionEvent.obtain(
+                        downTime,
+                        eventTime,
+                        MotionEvent.ACTION_UP,
+                        x,
+                        y,
+                        metaState
+                );
+                mQueuedSingleTaps.offer(motionEvent);
+
             }
         });
         btnInch.setOnClickListener(new View.OnClickListener(){

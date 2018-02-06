@@ -44,8 +44,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="16dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="16dp"
         android:src="@android:drawable/ic_menu_edit"
         app:backgroundTint="@color/gray"
         app:elevation="14dp"
@@ -172,4 +172,11 @@
         android:text="+"
         android:textSize="30sp"
         android:id="@+id/btnPlus"/>
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/focus"
+        />
 </RelativeLayout>
