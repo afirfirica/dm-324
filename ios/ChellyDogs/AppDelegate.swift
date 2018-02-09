@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+let defaults = UserDefaults.standard
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -22,6 +22,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIBarButtonItem.appearance().setTitleTextAttributes([.foregroundColor:UIColor.clear], for: .normal)
         UIBarButtonItem.appearance().setTitleTextAttributes([.foregroundColor:UIColor.clear], for: .highlighted)
         UIBarButtonItem.appearance().tintColor = UIColor.themeColor
+        
+        
+        if defaults.object(forKey: "isFirstTime") == nil {
+            defaults.set("No", forKey:"isFirstTime")
+            defaults.synchronize()
+            let storyboard = UIStoryboard(name: "Main", bundle: nil) //Write your storyboard name
+            let viewController = storyboard.instantiateViewController(withIdentifier: "NavigationViewController") as! NavigationViewController
+            self.window?.rootViewController = viewController
+            self.window?.makeKeyAndVisible()
+        }
+        
         
         return true
     }

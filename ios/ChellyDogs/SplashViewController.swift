@@ -8,36 +8,37 @@
 
 import UIKit
 
-var counter = 3
-var timer = Timer()
+
 
 class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Timer
-        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
         
         // Do any additional setup after loading the view.
     }
     
-    @objc func timerAction() {
-        counter -= 1
-        if(counter == 0){
-            timer.invalidate()
-            performSegue(withIdentifier: "SplashSegue",
-                         sender: self)
-            
-        }
-        
-    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if defaults.object(forKey: "isFirst") == nil {
+            
+            defaults.set("No", forKey:"isFirst")
+            defaults.synchronize()
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil) //Write your storyboard name
+            let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            self.navigationController?.pushViewController(viewController, animated: true)
+        } else {
+            self.navigationController?.popViewController(animated: true)
+        }
+        
+    }
     /*
      // MARK: - Navigation
      

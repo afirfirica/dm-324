@@ -23,7 +23,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var helpButton: UIButton!
     @IBOutlet var settingButton: UIButton!
     @IBOutlet var resetButton: UIButton!
+    @IBOutlet weak var btnInch: UIButton!
+    @IBOutlet weak var btnCm: UIButton!
     
+    // MARK: - Unit
+    var isCm: Bool = true
+    var isShow: Bool = false
     // MARK: - Guide
     let firstLaunchKey = "kUserDefault_AppIsFirstLaunch"
     var guideView: AwesomeIntroGuideView!
@@ -44,7 +49,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Set the view's delegate
         sceneView.delegate = self
-        
+        distanceLabel_Center.layer.cornerRadius = 10
+        distanceLabel_Center.clipsToBounds = true
         setupFocusSquare()
         
         cameraNode = SCNNode()
@@ -79,7 +85,29 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Pause the view's session
         sceneView.session.pause()
     }
-    
+    // btn Action
+    @IBAction func btnShowUnitClicked(_ sender: Any) {
+        btnCm.isHidden = isShow
+        btnInch.isHidden = isShow
+        isShow =  !isShow
+    }
+    @IBAction func btnCmClicked(_ sender: Any) {
+        isCm = true
+        lengthUnit = .CentiMeter
+        btnCm.setBackgroundImage(UIImage(named: "enable"), for: .normal)
+        btnInch.setBackgroundImage(UIImage(named: "disable"), for: .normal)
+    }
+    @IBAction func btnInchClicked(_ sender: Any) {
+        isCm = false
+        lengthUnit = .Inch
+        btnCm.setBackgroundImage(UIImage(named: "disable"), for: .normal)
+        btnInch.setBackgroundImage(UIImage(named: "enable"), for: .normal)
+    }
+    @IBAction func btnShowGuideClicked(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil) //Write your storyboard name
+        let viewController = storyboard.instantiateViewController(withIdentifier: "SplashViewController") as! SplashViewController
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
@@ -257,7 +285,8 @@ extension ViewController {
                 line = LineNode(startPos: p, sceneV: sceneView, cameraNode: cameraNode)
             }
         }else{
-            lines.append(line!)
+            restartSession()
+            // lines.append(line!)
             line = nil
         }
     }

@@ -403,7 +403,7 @@ extension Float {
             case .Foot:
                 return (3.2808399, "ft")
             case .Inch:
-                return (39.3700787, "in")
+                return (39.3700787, "inch")
             case .Ruler:
                 return (3.0, "ruler")
             }

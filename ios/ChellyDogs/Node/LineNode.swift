@@ -20,18 +20,27 @@ class LineNode: NSObject {
     init(startPos: SCNVector3, sceneV: ARSCNView, cameraNode:SCNNode) {
         sceneView = sceneV
         
-        let dot = SCNSphere(radius:1)
-        dot.firstMaterial?.diffuse.contents = UIColor.white
-        dot.firstMaterial?.lightingModel = .constant
-        dot.firstMaterial?.isDoubleSided = true
-        
-        startNode = SCNNode(geometry: dot)
-        startNode.scale = SCNVector3(1/400.0, 1/400.0, 1/400.0)
+        //        let dot = SCNSphere(radius:1)
+        //        dot.firstMaterial?.diffuse.contents = UIColor.white
+        //        dot.firstMaterial?.lightingModel = .constant
+        //        dot.firstMaterial?.isDoubleSided = true
+        //        startNode = SCNNode(geometry: dot)
+        //        startNode.scale = SCNVector3(1/400.0, 1/400.0, 1/400.0)
+        //        startNode.position = startPos
+        let plane = SCNPlane(width: 0.1, height: 0.1)
+        plane.firstMaterial!.diffuse.contents = UIImage(named: "focus")
+        startNode = SCNNode(geometry: plane)
+        startNode.constraints = [SCNBillboardConstraint()]
+        startNode.scale = SCNVector3(1/100.0, 1/100.0, 1/100.0)
         startNode.position = startPos
+        
         sceneView?.scene.rootNode.addChildNode(startNode)
         
-        endNode = SCNNode(geometry: dot)
-        endNode.scale = SCNVector3(1/400.0, 1/400.0, 1/400.0)
+        //        endNode = SCNNode(geometry: dot)
+        //        endNode.scale = SCNVector3(1/400.0, 1/400.0, 1/400.0)
+        endNode = SCNNode(geometry: plane)
+        endNode.scale = SCNVector3(1/100.0, 1/100.0, 1/100.0)
+        endNode.constraints = [SCNBillboardConstraint()]
         
         lineNode = nil
         

@@ -18,6 +18,7 @@
 		EC20ED3C2029B4E800990CCA /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC20ED3B2029B4E800990CCA /* SplashViewController.swift */; };
 		EC20ED3F2029B6F700990CCA /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC20ED3E2029B6F700990CCA /* R.generated.swift */; };
 		EC20ED662029BCF900990CCA /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC20ED3D2029B67100990CCA /* ARKit.framework */; };
+		EC7DC591202D9BC7009865B6 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7DC590202D9BC7009865B6 /* NavigationViewController.swift */; };
 		ECDF2C342029D30000788734 /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF2C302029D30000788734 /* FocusSquare.swift */; };
 		ECDF2C352029D30000788734 /* LineNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF2C312029D30000788734 /* LineNode.swift */; };
 		ECDF2C362029D30000788734 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF2C322029D30000788734 /* Plane.swift */; };
@@ -65,6 +66,7 @@
 		EC20ED3D2029B67100990CCA /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		EC20ED3E2029B6F700990CCA /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		EC20ED652029BC3100990CCA /* ChellyDogs-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChellyDogs-Bridging-Header.h"; sourceTree = "<group>"; };
+		EC7DC590202D9BC7009865B6 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		ECDF2C302029D30000788734 /* FocusSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
 		ECDF2C312029D30000788734 /* LineNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineNode.swift; sourceTree = "<group>"; };
 		ECDF2C322029D30000788734 /* Plane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				EC20ED012029AB9600990CCA /* AppDelegate.swift */,
 				EC20ED3B2029B4E800990CCA /* SplashViewController.swift */,
 				EC20ED032029AB9600990CCA /* ViewController.swift */,
+				EC7DC590202D9BC7009865B6 /* NavigationViewController.swift */,
 				EC20ED052029AB9600990CCA /* Main.storyboard */,
 				EC20ED082029AB9600990CCA /* Assets.xcassets */,
 				EC20ED0A2029AB9600990CCA /* LaunchScreen.storyboard */,
@@ -404,6 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC7DC591202D9BC7009865B6 /* NavigationViewController.swift in Sources */,
 				ECDF2C342029D30000788734 /* FocusSquare.swift in Sources */,
 				ECDF2C3F2029D31F00788734 /* Utilities.swift in Sources */,
 				ECDF2C3D2029D31F00788734 /* PlaneDetector.mm in Sources */,
