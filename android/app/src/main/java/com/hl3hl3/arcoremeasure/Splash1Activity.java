@@ -19,7 +19,19 @@ public class Splash1Activity extends AppCompatActivity {
                     e.printStackTrace();
                 } finally{
 
-                    Intent intent = new Intent(Splash1Activity.this,Splash2Activity.class);
+                    Intent intent;
+                    Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+                            .getBoolean("isFirstRun", true);
+
+                    if (isFirstRun) {
+                        //show sign up activity
+                        intent = new Intent(Splash1Activity.this,Splash2Activity.class);
+                    } else {
+                        intent = new Intent(Splash1Activity.this,ArMeasureActivity.class);
+                    }
+                    getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
+                            .putBoolean("isFirstRun", false).apply();
+
                     startActivity(intent);
 
                 }

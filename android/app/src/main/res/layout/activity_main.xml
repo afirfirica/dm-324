@@ -133,28 +133,30 @@
 
     </ScrollView>
     <Button
-        android:layout_width="70dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginRight="30dp"
         android:layout_alignParentRight="true"
         android:layout_above="@+id/btnCm"
         android:text="Inch"
+        android:background="@drawable/disable"
         android:textAllCaps="false"
         android:id="@+id/btnInch"/>
     <Button
-        android:layout_width="70dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginRight="30dp"
         android:layout_alignParentRight="true"
         android:layout_above="@+id/imgUnit"
         android:text="Cm"
+        android:background="@drawable/enable"
         android:textAllCaps="false"
         android:id="@+id/btnCm"/>
     <ImageView
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="30dp"
@@ -179,4 +181,14 @@
         android:src="@drawable/focus"
         android:background="@android:color/transparent"
         />
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:src="@drawable/measure"
+        android:scaleType="fitXY"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/imgMeasure"
+        android:tooltipText="cm"
+        android:layout_marginRight="20dp"/>
 </RelativeLayout>

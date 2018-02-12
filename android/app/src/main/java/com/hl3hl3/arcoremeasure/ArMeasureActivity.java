@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
@@ -162,8 +163,11 @@ public class ArMeasureActivity extends AppCompatActivity {
     Button btnCm;
     Button btnInch;
     Button btnPlus;
+    ImageView imageView;
+    ImageView imgMeasure;
     int isCm = 1;
     boolean isBtnPlus = false;
+    boolean isShow = false;
     FloatingActionButton fab;
     //hjs
     Context contex = this;
@@ -215,8 +219,30 @@ public class ArMeasureActivity extends AppCompatActivity {
         btnCm =(Button) findViewById(R.id.btnCm);
         btnInch =(Button) findViewById(R.id.btnInch);
         btnPlus =(Button) findViewById(R.id.btnPlus);
-        btnCm.setBackgroundColor(ContextCompat.getColor(this, R.color.checked));
-        btnInch.setBackgroundColor(ContextCompat.getColor(this, R.color.unChecked));
+        imageView = findViewById(R.id.imgUnit);
+        imgMeasure = findViewById(R.id.imgMeasure);
+        btnCm.setVisibility(View.GONE);
+        btnInch.setVisibility(View.GONE);
+        imageView.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick(View view) {
+                isShow = !isShow;
+                if (isShow) {
+                    btnCm.setVisibility(View.VISIBLE);
+                    btnInch.setVisibility(View.VISIBLE);
+                } else {
+                    btnCm.setVisibility(View.GONE);
+                    btnInch.setVisibility(View.GONE);
+                }
+
+            }});
+        imgMeasure.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick(View view) {
+                Intent intent = new Intent(ArMeasureActivity.this,Splash2Activity.class);
+                startActivity(intent);
+
+            }});
         for(int i=0; i<cubeIconIdArray.length; i++){
             ivCubeIconList[i] = findViewById(cubeIconIdArray[i]);
             ivCubeIconList[i].setTag(i);
@@ -240,7 +266,7 @@ public class ArMeasureActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Obtain MotionEvent object
-                if ( isBtnPlus == false ) {
+                if ( !isBtnPlus ) {
                     btnPlus.setBackgroundResource(R.drawable.focus_checked);
                     isBtnPlus = true;
                 } else {
@@ -275,17 +301,18 @@ public class ArMeasureActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 isCm = 0;
+                btnCm.setBackgroundResource(R.drawable.disable);
+                btnInch.setBackgroundResource(R.drawable.enable);
 
-                btnInch.setBackgroundColor(ContextCompat.getColor(contex, R.color.checked));
-                btnCm.setBackgroundColor(ContextCompat.getColor(contex, R.color.unChecked));
             }
         });
         btnCm.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 isCm = 1;
-                btnCm.setBackgroundColor(ContextCompat.getColor(contex, R.color.checked));
-                btnInch.setBackgroundColor(ContextCompat.getColor(contex, R.color.unChecked));
+                btnCm.setBackgroundResource(R.drawable.enable);
+                btnInch.setBackgroundResource(R.drawable.disable);
+
             }
         });
         fab.setOnClickListener(new View.OnClickListener(){
