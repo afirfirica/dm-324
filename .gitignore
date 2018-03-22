@@ -1,1 +1,3 @@
 android/.idea/
+ios/Pods
+Ios/Podfile.lock
