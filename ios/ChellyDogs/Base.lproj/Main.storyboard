@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -140,11 +139,11 @@
                                     <action selector="placeAction:" destination="Zgm-gx-8fh" eventType="touchUpInside" id="pJE-LY-5z8"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Slice" translatesAutoresizingMaskIntoConstraints="NO" id="mod-Ar-nZM">
-                                <rect key="frame" x="163" y="309" width="50" height="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mod-Ar-nZM">
+                                <rect key="frame" x="183" y="329" width="10" height="10"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="oCg-Ji-l3f"/>
-                                    <constraint firstAttribute="width" constant="50" id="rgp-gn-Idn"/>
+                                    <constraint firstAttribute="height" constant="10" id="oCg-Ji-l3f"/>
+                                    <constraint firstAttribute="width" constant="10" id="rgp-gn-Idn"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEd-RC-K9M">
@@ -226,7 +225,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Slice" width="40" height="42"/>
         <image name="add" width="80" height="80"/>
         <image name="disable" width="90" height="48"/>
         <image name="enable" width="90" height="48"/>

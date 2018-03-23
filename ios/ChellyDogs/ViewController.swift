@@ -25,7 +25,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var resetButton: UIButton!
     @IBOutlet weak var btnInch: UIButton!
     @IBOutlet weak var btnCm: UIButton!
-    
+    var flagPlaceButton = 0
     // MARK: - Unit
     var isCm: Bool = true
     var isShow: Bool = false
@@ -159,10 +159,10 @@ extension ViewController {
     func updateView(state: Bool) {
         if state {
             placeButton.isEnabled = true
-            indicator.tintColor = UIColor.fineColor
+//            indicator.tintColor = UIColor.fineColor
         }else{
             placeButton.isEnabled = false
-            indicator.tintColor = UIColor.alertColor
+//            indicator.tintColor = UIColor.alertColor
         }
     }
     
@@ -278,17 +278,37 @@ extension ViewController {
 extension ViewController {
     @IBAction func placeAction(_ sender: UIButton) {
         buttonAnimated(btn: sender)
+        
         sender.isSelected = !sender.isSelected;
-        if line == nil {
+//        if line == nil {
+//            let startPos = worldPositionFromScreenPosition(indicator.center, objectPos: nil)
+//            if let p = startPos.position {
+//                line = LineNode(startPos: p, sceneV: sceneView, cameraNode: cameraNode)
+//            }
+//        }else{
+//            restartSession()
+////            lines.append(line!)
+//            line = nil
+//        }
+        if flagPlaceButton == 0 {
+            
             let startPos = worldPositionFromScreenPosition(indicator.center, objectPos: nil)
             if let p = startPos.position {
                 line = LineNode(startPos: p, sceneV: sceneView, cameraNode: cameraNode)
             }
-        }else{
-            restartSession()
-            // lines.append(line!)
+            
+            flagPlaceButton = 1
+        } else if flagPlaceButton == 1 {
+            lines.append(line!)
             line = nil
+            
+            flagPlaceButton = 2
+        } else {
+            restartSession()
+            
+            flagPlaceButton = 0
         }
+        
     }
     
     @IBAction func deleteAction(_ sender: UIButton) {
