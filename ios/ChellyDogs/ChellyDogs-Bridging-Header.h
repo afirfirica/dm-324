@@ -9,7 +9,5 @@
 #ifndef ChellyDogs_Bridging_Header_h
 #define ChellyDogs_Bridging_Header_h
 #import "PlaneDetector.h"
-#import <LeanCloudFeedback/LeanCloudFeedback.h>
-#import <AVOSCloud/AVOSCloud.h>
 
 #endif /* ChellyDogs_Bridging_Header_h */

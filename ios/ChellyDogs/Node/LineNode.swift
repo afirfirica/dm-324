@@ -27,7 +27,7 @@ class LineNode: NSObject {
         //        startNode = SCNNode(geometry: dot)
         //        startNode.scale = SCNVector3(1/400.0, 1/400.0, 1/400.0)
         //        startNode.position = startPos
-        let plane = SCNPlane(width: 0.1, height: 0.1)
+        let plane = SCNPlane(width: 0.01, height: 0.02)
         plane.firstMaterial!.diffuse.contents = UIImage(named: "focus")
         startNode = SCNNode(geometry: plane)
         startNode.constraints = [SCNBillboardConstraint()]

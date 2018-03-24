@@ -20,12 +20,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var distanceLabel_Center: UILabel!
     @IBOutlet var debugButton: UIButton!
     @IBOutlet var trashButton: UIButton!
-    @IBOutlet var helpButton: UIButton!
-    @IBOutlet var settingButton: UIButton!
-    @IBOutlet var resetButton: UIButton!
     @IBOutlet weak var btnInch: UIButton!
     @IBOutlet weak var btnCm: UIButton!
-    var flagPlaceButton = 0
     // MARK: - Unit
     var isCm: Bool = true
     var isShow: Bool = false
@@ -127,7 +123,9 @@ extension ViewController {
             }
             updateView(state: true)
             let length = self.line?.updatePosition(pos: p, camera: self.sceneView.session.currentFrame?.camera) ?? 0
-            distanceLabel_Center.text = String(format: "%.1f%@", arguments: [length*lengthUnit.rate.0,lengthUnit.rate.1])
+            if length > 0 {
+                distanceLabel_Center.text = String(format: "%.2f%@", arguments: [length*lengthUnit.rate.0,lengthUnit.rate.1])
+            }
         }
         
         guard self.sceneView.session.currentFrame != nil else {
@@ -185,10 +183,6 @@ extension ViewController {
                      ["rect":NSValue(cgRect:placeButton.frame.insetBy(dx: -10, dy: -10)),"caption":"Click here to set the measurement start point","shape":"circle"],
                      ["rect":NSValue(cgRect:distanceLabel_Center.frame.insetBy(dx: -10, dy: -10)),"caption":"Mobile devices\nView the measurement results in real time","shape":"square"],
                      ["rect":NSValue(cgRect:placeButton.frame.insetBy(dx: -10, dy: -10)),"caption":"Click here to set the measurement end point","shape":"circle"],
-                   
-                     ["rect":NSValue(cgRect:resetButton.frame.insetBy(dx: -10, dy: -10)),"caption":"Click here to delete all the measurements\nReinitialize the measurement","shape":"circle"],
-                     ["rect":NSValue(cgRect:helpButton.frame.insetBy(dx: -10, dy: -10)),"caption":"Click here for help","shape":"circle"],
-                     ["rect":NSValue(cgRect:settingButton.frame.insetBy(dx: -10, dy: -10)),"caption":"Click here to view modify software settings","shape":"circle"],
                      ["caption":"Start your first measurement"]]
         
         guideView = AwesomeIntroGuideView(frame: UIScreen.main.bounds, coachMarks:marks)
@@ -280,35 +274,16 @@ extension ViewController {
         buttonAnimated(btn: sender)
         
         sender.isSelected = !sender.isSelected;
-//        if line == nil {
-//            let startPos = worldPositionFromScreenPosition(indicator.center, objectPos: nil)
-//            if let p = startPos.position {
-//                line = LineNode(startPos: p, sceneV: sceneView, cameraNode: cameraNode)
-//            }
-//        }else{
-//            restartSession()
-////            lines.append(line!)
-//            line = nil
-//        }
-        if flagPlaceButton == 0 {
-            
+        if line == nil {
+            deleteAction(sender)
             let startPos = worldPositionFromScreenPosition(indicator.center, objectPos: nil)
             if let p = startPos.position {
                 line = LineNode(startPos: p, sceneV: sceneView, cameraNode: cameraNode)
             }
-            
-            flagPlaceButton = 1
-        } else if flagPlaceButton == 1 {
+        } else {
             lines.append(line!)
             line = nil
-            
-            flagPlaceButton = 2
-        } else {
-            restartSession()
-            
-            flagPlaceButton = 0
         }
-        
     }
     
     @IBAction func deleteAction(_ sender: UIButton) {
