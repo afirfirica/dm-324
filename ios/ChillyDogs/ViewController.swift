@@ -23,7 +23,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var btnInch: UIButton!
     @IBOutlet weak var btnCm: UIButton!
     // MARK: - Unit
-    var isCm: Bool = true
     var isShow: Bool = false
     // MARK: - Guide
     let firstLaunchKey = "kUserDefault_AppIsFirstLaunch"
@@ -88,13 +87,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         isShow =  !isShow
     }
     @IBAction func btnCmClicked(_ sender: Any) {
-        isCm = true
         lengthUnit = .CentiMeter
         btnCm.setBackgroundImage(UIImage(named: "enable"), for: .normal)
         btnInch.setBackgroundImage(UIImage(named: "disable"), for: .normal)
     }
     @IBAction func btnInchClicked(_ sender: Any) {
-        isCm = false
         lengthUnit = .Inch
         btnCm.setBackgroundImage(UIImage(named: "disable"), for: .normal)
         btnInch.setBackgroundImage(UIImage(named: "enable"), for: .normal)
@@ -122,7 +119,7 @@ extension ViewController {
                 return
             }
             updateView(state: true)
-            let length = self.line?.updatePosition(pos: p, camera: self.sceneView.session.currentFrame?.camera) ?? 0
+            let length = self.line?.updatePosition(pos: p, camera: self.sceneView.session.currentFrame?.camera, lengthUnit: lengthUnit) ?? 0
             if length > 0 {
                 distanceLabel_Center.text = String(format: "%.2f%@", arguments: [length*lengthUnit.rate.0,lengthUnit.rate.1])
             }

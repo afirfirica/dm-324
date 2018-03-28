@@ -49,23 +49,23 @@
 		0B24681248E72FD909E6B63B /* Pods_ChellyDogs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChellyDogs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		639A205B863316862845CCFD /* Pods-ChellyDogs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChellyDogs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChellyDogs/Pods-ChellyDogs.debug.xcconfig"; sourceTree = "<group>"; };
 		9B925D1B2B9BDBF028E74DA3 /* Pods-ChellyDogs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChellyDogs.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChellyDogs/Pods-ChellyDogs.release.xcconfig"; sourceTree = "<group>"; };
-		EC20ECFE2029AB9600990CCA /* ChellyDogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChellyDogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC20ECFE2029AB9600990CCA /* ChillyDogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChillyDogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC20ED012029AB9600990CCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC20ED032029AB9600990CCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EC20ED062029AB9600990CCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC20ED082029AB9600990CCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC20ED0B2029AB9600990CCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC20ED0D2029AB9600990CCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC20ED122029AB9600990CCA /* ChellyDogsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChellyDogsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC20ED122029AB9600990CCA /* ChillyDogsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChillyDogsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC20ED162029AB9600990CCA /* ChellyDogsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChellyDogsTests.swift; sourceTree = "<group>"; };
 		EC20ED182029AB9600990CCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC20ED1D2029AB9600990CCA /* ChellyDogsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChellyDogsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC20ED1D2029AB9600990CCA /* ChillyDogsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChillyDogsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC20ED212029AB9600990CCA /* ChellyDogsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChellyDogsUITests.swift; sourceTree = "<group>"; };
 		EC20ED232029AB9600990CCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC20ED3B2029B4E800990CCA /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		EC20ED3D2029B67100990CCA /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		EC20ED3E2029B6F700990CCA /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
-		EC20ED652029BC3100990CCA /* ChellyDogs-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChellyDogs-Bridging-Header.h"; sourceTree = "<group>"; };
+		EC20ED652029BC3100990CCA /* ChillyDogs-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChillyDogs-Bridging-Header.h"; sourceTree = "<group>"; };
 		EC7DC590202D9BC7009865B6 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		ECDF2C302029D30000788734 /* FocusSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
 		ECDF2C312029D30000788734 /* LineNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineNode.swift; sourceTree = "<group>"; };
@@ -125,9 +125,9 @@
 		EC20ECF52029AB9600990CCA = {
 			isa = PBXGroup;
 			children = (
-				EC20ED002029AB9600990CCA /* ChellyDogs */,
-				EC20ED152029AB9600990CCA /* ChellyDogsTests */,
-				EC20ED202029AB9600990CCA /* ChellyDogsUITests */,
+				EC20ED002029AB9600990CCA /* ChillyDogs */,
+				EC20ED152029AB9600990CCA /* ChillyDogsTests */,
+				EC20ED202029AB9600990CCA /* ChillyDogsUITests */,
 				EC20ECFF2029AB9600990CCA /* Products */,
 				6EDB183F34F623FD7C8BA9C0 /* Pods */,
 				3D7C266AE8715ECFFFF3D509 /* Frameworks */,
@@ -137,14 +137,14 @@
 		EC20ECFF2029AB9600990CCA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EC20ECFE2029AB9600990CCA /* ChellyDogs.app */,
-				EC20ED122029AB9600990CCA /* ChellyDogsTests.xctest */,
-				EC20ED1D2029AB9600990CCA /* ChellyDogsUITests.xctest */,
+				EC20ECFE2029AB9600990CCA /* ChillyDogs.app */,
+				EC20ED122029AB9600990CCA /* ChillyDogsTests.xctest */,
+				EC20ED1D2029AB9600990CCA /* ChillyDogsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EC20ED002029AB9600990CCA /* ChellyDogs */ = {
+		EC20ED002029AB9600990CCA /* ChillyDogs */ = {
 			isa = PBXGroup;
 			children = (
 				ECDF2C382029D31F00788734 /* Utils */,
@@ -158,27 +158,27 @@
 				EC20ED082029AB9600990CCA /* Assets.xcassets */,
 				EC20ED0A2029AB9600990CCA /* LaunchScreen.storyboard */,
 				EC20ED0D2029AB9600990CCA /* Info.plist */,
-				EC20ED652029BC3100990CCA /* ChellyDogs-Bridging-Header.h */,
+				EC20ED652029BC3100990CCA /* ChillyDogs-Bridging-Header.h */,
 			);
-			path = ChellyDogs;
+			path = ChillyDogs;
 			sourceTree = "<group>";
 		};
-		EC20ED152029AB9600990CCA /* ChellyDogsTests */ = {
+		EC20ED152029AB9600990CCA /* ChillyDogsTests */ = {
 			isa = PBXGroup;
 			children = (
 				EC20ED162029AB9600990CCA /* ChellyDogsTests.swift */,
 				EC20ED182029AB9600990CCA /* Info.plist */,
 			);
-			path = ChellyDogsTests;
+			path = ChillyDogsTests;
 			sourceTree = "<group>";
 		};
-		EC20ED202029AB9600990CCA /* ChellyDogsUITests */ = {
+		EC20ED202029AB9600990CCA /* ChillyDogsUITests */ = {
 			isa = PBXGroup;
 			children = (
 				EC20ED212029AB9600990CCA /* ChellyDogsUITests.swift */,
 				EC20ED232029AB9600990CCA /* Info.plist */,
 			);
-			path = ChellyDogsUITests;
+			path = ChillyDogsUITests;
 			sourceTree = "<group>";
 		};
 		ECDF2C2F2029D30000788734 /* Node */ = {
@@ -206,9 +206,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EC20ECFD2029AB9600990CCA /* ChellyDogs */ = {
+		EC20ECFD2029AB9600990CCA /* ChillyDogs */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC20ED262029AB9600990CCA /* Build configuration list for PBXNativeTarget "ChellyDogs" */;
+			buildConfigurationList = EC20ED262029AB9600990CCA /* Build configuration list for PBXNativeTarget "ChillyDogs" */;
 			buildPhases = (
 				FC81572BE6E09AFA11E7A048 /* [CP] Check Pods Manifest.lock */,
 				EC20ECFA2029AB9600990CCA /* Sources */,
@@ -221,14 +221,14 @@
 			);
 			dependencies = (
 			);
-			name = ChellyDogs;
+			name = ChillyDogs;
 			productName = ChellyDogs;
-			productReference = EC20ECFE2029AB9600990CCA /* ChellyDogs.app */;
+			productReference = EC20ECFE2029AB9600990CCA /* ChillyDogs.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EC20ED112029AB9600990CCA /* ChellyDogsTests */ = {
+		EC20ED112029AB9600990CCA /* ChillyDogsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC20ED292029AB9600990CCA /* Build configuration list for PBXNativeTarget "ChellyDogsTests" */;
+			buildConfigurationList = EC20ED292029AB9600990CCA /* Build configuration list for PBXNativeTarget "ChillyDogsTests" */;
 			buildPhases = (
 				EC20ED0E2029AB9600990CCA /* Sources */,
 				EC20ED0F2029AB9600990CCA /* Frameworks */,
@@ -239,14 +239,14 @@
 			dependencies = (
 				EC20ED142029AB9600990CCA /* PBXTargetDependency */,
 			);
-			name = ChellyDogsTests;
+			name = ChillyDogsTests;
 			productName = ChellyDogsTests;
-			productReference = EC20ED122029AB9600990CCA /* ChellyDogsTests.xctest */;
+			productReference = EC20ED122029AB9600990CCA /* ChillyDogsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		EC20ED1C2029AB9600990CCA /* ChellyDogsUITests */ = {
+		EC20ED1C2029AB9600990CCA /* ChillyDogsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC20ED2C2029AB9600990CCA /* Build configuration list for PBXNativeTarget "ChellyDogsUITests" */;
+			buildConfigurationList = EC20ED2C2029AB9600990CCA /* Build configuration list for PBXNativeTarget "ChillyDogsUITests" */;
 			buildPhases = (
 				EC20ED192029AB9600990CCA /* Sources */,
 				EC20ED1A2029AB9600990CCA /* Frameworks */,
@@ -257,9 +257,9 @@
 			dependencies = (
 				EC20ED1F2029AB9600990CCA /* PBXTargetDependency */,
 			);
-			name = ChellyDogsUITests;
+			name = ChillyDogsUITests;
 			productName = ChellyDogsUITests;
-			productReference = EC20ED1D2029AB9600990CCA /* ChellyDogsUITests.xctest */;
+			productReference = EC20ED1D2029AB9600990CCA /* ChillyDogsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -289,7 +289,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EC20ECF92029AB9600990CCA /* Build configuration list for PBXProject "ChellyDogs" */;
+			buildConfigurationList = EC20ECF92029AB9600990CCA /* Build configuration list for PBXProject "ChillyDogs" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -302,9 +302,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EC20ECFD2029AB9600990CCA /* ChellyDogs */,
-				EC20ED112029AB9600990CCA /* ChellyDogsTests */,
-				EC20ED1C2029AB9600990CCA /* ChellyDogsUITests */,
+				EC20ECFD2029AB9600990CCA /* ChillyDogs */,
+				EC20ED112029AB9600990CCA /* ChillyDogsTests */,
+				EC20ED1C2029AB9600990CCA /* ChillyDogsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -437,12 +437,12 @@
 /* Begin PBXTargetDependency section */
 		EC20ED142029AB9600990CCA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EC20ECFD2029AB9600990CCA /* ChellyDogs */;
+			target = EC20ECFD2029AB9600990CCA /* ChillyDogs */;
 			targetProxy = EC20ED132029AB9600990CCA /* PBXContainerItemProxy */;
 		};
 		EC20ED1F2029AB9600990CCA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EC20ECFD2029AB9600990CCA /* ChellyDogs */;
+			target = EC20ECFD2029AB9600990CCA /* ChillyDogs */;
 			targetProxy = EC20ED1E2029AB9600990CCA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -581,13 +581,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T978RQ965E;
-				INFOPLIST_FILE = ChellyDogs/Info.plist;
+				DEVELOPMENT_TEAM = 4L2YL6BRVN;
+				INFOPLIST_FILE = ChillyDogs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = company.ChellyDogs;
+				PRODUCT_BUNDLE_IDENTIFIER = com.karma.chillydogs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ChellyDogs/ChellyDogs-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ChillyDogs/ChillyDogs-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -601,13 +601,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T978RQ965E;
-				INFOPLIST_FILE = ChellyDogs/Info.plist;
+				DEVELOPMENT_TEAM = 4L2YL6BRVN;
+				INFOPLIST_FILE = ChillyDogs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = company.ChellyDogs;
+				PRODUCT_BUNDLE_IDENTIFIER = com.karma.chillydogs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ChellyDogs/ChellyDogs-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ChillyDogs/ChillyDogs-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -625,7 +625,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChellyDogs.app/ChellyDogs";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChillyDogs.app/ChillyDogs";
 			};
 			name = Debug;
 		};
@@ -641,7 +641,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChellyDogs.app/ChellyDogs";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChillyDogs.app/ChillyDogs";
 			};
 			name = Release;
 		};
@@ -678,7 +678,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EC20ECF92029AB9600990CCA /* Build configuration list for PBXProject "ChellyDogs" */ = {
+		EC20ECF92029AB9600990CCA /* Build configuration list for PBXProject "ChillyDogs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC20ED242029AB9600990CCA /* Debug */,
@@ -687,7 +687,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC20ED262029AB9600990CCA /* Build configuration list for PBXNativeTarget "ChellyDogs" */ = {
+		EC20ED262029AB9600990CCA /* Build configuration list for PBXNativeTarget "ChillyDogs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC20ED272029AB9600990CCA /* Debug */,
@@ -696,7 +696,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC20ED292029AB9600990CCA /* Build configuration list for PBXNativeTarget "ChellyDogsTests" */ = {
+		EC20ED292029AB9600990CCA /* Build configuration list for PBXNativeTarget "ChillyDogsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC20ED2A2029AB9600990CCA /* Debug */,
@@ -705,7 +705,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC20ED2C2029AB9600990CCA /* Build configuration list for PBXNativeTarget "ChellyDogsUITests" */ = {
+		EC20ED2C2029AB9600990CCA /* Build configuration list for PBXNativeTarget "ChillyDogsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC20ED2D2029AB9600990CCA /* Debug */,

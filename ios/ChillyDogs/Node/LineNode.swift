@@ -69,7 +69,7 @@ class LineNode: NSObject {
         removeFromParent()
     }
     
-    public func updatePosition(pos: SCNVector3, camera: ARCamera?) -> Float {
+    public func updatePosition(pos: SCNVector3, camera: ARCamera?, lengthUnit: Float.LengthUnit) -> Float {
         let posEnd = updateTransform(for: pos, camera: camera)
         
         if endNode.parent == nil {
@@ -82,7 +82,7 @@ class LineNode: NSObject {
         
         let text = textNode.geometry as! SCNText
         let length = posEnd.distanceFromPos(pos: startNode.position)
-        text.string = String(format: "%.2fcm", length*Float.LengthUnit.CentiMeter.rate.0)
+        text.string = String(format: "%.2f%@", length*lengthUnit.rate.0, lengthUnit.rate.1)
         textNode.setPivot()
         textWrapNode.position = middle
         
