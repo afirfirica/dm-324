@@ -97,9 +97,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         btnInch.setBackgroundImage(UIImage(named: "enable"), for: .normal)
     }
     @IBAction func btnShowGuideClicked(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil) //Write your storyboard name
-        let viewController = storyboard.instantiateViewController(withIdentifier: "SplashViewController") as! SplashViewController
-        self.navigationController?.pushViewController(viewController, animated: true)
+        showGuideView()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -173,7 +171,7 @@ extension ViewController {
     }
     
     func showGuideView() -> Void {
-        let marks = [["caption":"welcome Dog Measure\n Click on the screen to see the novice tutorial"],
+        let marks = [["caption":"welcome Chilly Dogs\n Click on the screen to see the novice tutorial"],
                      ["caption":"Move the phone left or right to initialize the measurement\nClick the screen to see the next step"],
                      ["rect":NSValue(cgRect:indicator.frame.insetBy(dx: -10, dy: -10)),"caption":"The measurement can be started when the indicator turns green","shape":"circle"],
                      ["rect":NSValue(cgRect:indicator.frame.insetBy(dx: -10, dy: -10)),"caption":"Align the center of the indicator with the start of the measurement","shape":"circle"],
