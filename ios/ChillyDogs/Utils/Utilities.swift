@@ -430,6 +430,8 @@ extension ARCamera.TrackingState {
                 return "Fewer feature points\nPlease ensure that the camera is not blocked and the ambient light is sufficient"
             case .initializing:
                 return "AR initializing\nMove your device left and right for more feature points"
+            case .relocalizing:
+                return "AR relocalizaing"
             }
         }
     }
@@ -442,6 +444,8 @@ extension ARError.Code {
             return "Unfortunately，Your current device is not supported"
         case .cameraUnauthorized:
             return "Camera failed to open\nPlease go to the settings page to open the camera permissions"
+        case .invalidReferenceImage:
+            return "Camear invalid reference image"
         }
     }
 }

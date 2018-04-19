@@ -152,10 +152,10 @@ extension ViewController {
     func updateView(state: Bool) {
         if state {
             placeButton.isEnabled = true
-//            indicator.tintColor = UIColor.fineColor
+            indicator.tintColor = UIColor.fineColor
         }else{
             placeButton.isEnabled = false
-//            indicator.tintColor = UIColor.alertColor
+            indicator.tintColor = UIColor.alertColor
         }
     }
     
@@ -241,6 +241,8 @@ extension ViewController {
                 break
             case .insufficientFeatures,.initializing:
                 HUD.show(.label(tips))
+                break
+            case .relocalizing:
                 break
             }
         }
